@@ -10,8 +10,6 @@ class Transmitter:
 
         # Allow broadcasting
         self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
-        # Bind to available port
-        self.sock.bind((self.ip, Transmitter.HOST_PORT))
 
         print(f"Broadcasting to {self.ip}: {Transmitter.PORT}")
 
